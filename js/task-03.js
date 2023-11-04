@@ -16,11 +16,20 @@ const images = [
 const list = document.querySelector(".gallery");
 console.log(list);
 
-const markup = images.map(
-    ({ url, alt }) => `
+const markup = images
+    .map(
+        ({ url, alt }) => `
             <li class ="foto">
-            <img srс="${url}" alt="${alt}"  width = "300">
+            <img src="${url}" alt="${alt}"  width = "300">
             </li>`
-)
+    )
     .join("");
 list.insertAdjacentHTML("afterbegin", markup);
+
+list.style.display = "flex";
+list.style.flexDirection = "column";
+list.style.gap = "40px";
+list.style.listStyle = "none";
+
+
+console.log(markup);
