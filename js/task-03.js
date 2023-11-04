@@ -13,20 +13,14 @@ const images = [
     },
 ];
 
-const list = document.querySelector("ul");
+const list = document.querySelector(".gallery");
 console.log(list);
 
-function createMarkup(arr) {
-
-    const markup = images
-        .map(
-            ({ url, alt }) => `<li><img scr="${url}" alt="${alt}" class = "foto" width = "300"/></li>`
-        )
-        .join("");
-
-    list.insertAdjacentHTML("afterbegin", markup);
-
-}
-
-createMarkup(images);
-
+const markup = images.map(
+    ({ url, alt }) => `
+            <li class ="foto">
+            <img srс="${url}" alt="${alt}"  width = "300">
+            </li>`
+)
+    .join("");
+list.insertAdjacentHTML("afterbegin", markup);
