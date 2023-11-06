@@ -5,7 +5,7 @@ formEl.addEventListener('submit', handleSubmit)
 function handleSubmit(event) {
     event.preventDefault()
 
-    const { email, password } = event.target.elements;
+    const form = event.target;
     const email = form.elements.email.value;
     const password = form.elements.password.value;
 
