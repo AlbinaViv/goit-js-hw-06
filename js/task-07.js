@@ -7,7 +7,6 @@ inputEl.addEventListener('input', handeleInput)
 
 
 let step = 16;
-const range = age >= 20;
 function handeleInput(event) {
     step += 1;
     if (step >= 16 & <= 96) {
